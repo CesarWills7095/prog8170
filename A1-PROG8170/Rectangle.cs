@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace A1_PROG8170
 {
-    class Rectangle
+    public class Rectangle
     {
         private int _length;
         private int _width;
@@ -32,13 +32,21 @@ namespace A1_PROG8170
         }
         public int SetLength(int length)
         {
-            _length = length;
-            return _length;
+            if (length > 0)
+            {
+                _length = length;
+                return _length;
+            }
+            else return -1;
         }
         public int SetWidth(int width)
         {
-            _width = width;
-            return _width;
+            if (width > 0)
+            {
+                _width = width;
+                return _width;
+            }
+            else return -1;
         }
         public int GetPerimeter()
         {
